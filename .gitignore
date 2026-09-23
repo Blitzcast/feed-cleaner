@@ -1,17 +1,67 @@
-# Secrets
+# Env / secrets
 .env
 .env.*
 !.env.example
 .dev.vars
+.dev.vars.*
+.wrangler/
+
+# GCP service account keys and other credential files
+secrets/
+*service-account*.json
+*-credentials.json
+
+# Supabase CLI local state
+supabase/.temp/
+supabase/.branches/
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+out/
+.output/
+
+# Packaged extension artifacts
+*.zip
+site/public/bot-collapse.zip
+*.crx
+# Extension signing key: never commit
 *.pem
 
-# Dependencies and build output
-node_modules/
-.wrangler/
-site/public/bot-collapse.zip
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# OS / editor
+# Test / coverage
+coverage/
+.nyc_output/
+
+# Eval session exports (raw scraped X data, may contain other users' handles)
+eval/raw/
+*.har
+
+# Editor / IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# OS
 .DS_Store
 Thumbs.db
-.vscode/
-.idea/
+desktop.ini
+
+# Caches
+.cache/
+.parcel-cache/
+.vite/
+.eslintcache
+*.tsbuildinfo
