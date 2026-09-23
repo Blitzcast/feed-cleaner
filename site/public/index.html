@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feed Cleaner: collapse likely-bot posts on X</title>
+  <meta name="description" content="A Chrome extension that collapses likely-bot posts on X behind a click.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Feed Cleaner</h1>
+      <p class="lede">A Chrome extension that collapses likely-bot posts on X behind a click. Nothing is deleted or hidden for good: one click shows the post.</p>
+      <a class="button" href="/bot-collapse.zip" download>Download the extension (.zip)</a>
+    </header>
+
+    <section>
+      <h2>What it does</h2>
+      <ul>
+        <li>Checks each post on your timeline against a few signals read from the page.</li>
+        <li>Collapses posts that look like bots behind a “show post” bar.</li>
+        <li>Leaves reply threads intact, so conversations still make sense.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What it doesn’t do</h2>
+      <ul>
+        <li>It doesn’t detect misinformation. It only guesses whether an account is a bot.</li>
+        <li>It doesn’t work on mobile, only desktop Chrome and other Chromium browsers.</li>
+      </ul>
+    </section>
+
+    <section class="note">
+      <h2>Honesty note</h2>
+      <p>The thresholds are <strong>guesses</strong>. They haven’t been tuned or validated yet, so expect it to collapse some real people and miss some bots.</p>
+      <p>If you see a wrong collapse, or a bot it missed, please send me the post link. That’s the most useful feedback you can give.</p>
+    </section>
+
+    <section>
+      <h2>Install (about 1 minute)</h2>
+      <ol>
+        <li><a href="/bot-collapse.zip" download>Download the zip</a> and unzip it. You’ll get a folder.</li>
+        <li>Open <code>chrome://extensions</code> in a new tab. You have to type or paste it; links to it are blocked.</li>
+        <li>Turn on <strong>Developer mode</strong> (toggle, top right).</li>
+        <li>Click <strong>Load unpacked</strong> and pick the unzipped folder.</li>
+        <li>Open or reload <a href="https://x.com">x.com</a>. Likely-bot posts now show as collapsed bars.</li>
+      </ol>
+      <p class="small">Chrome may warn about developer-mode extensions on startup. That’s expected for anything not installed from the Chrome Web Store. To update, download the new zip, replace the folder, and click the reload icon on the extension’s card.</p>
+    </section>
+
+    <section>
+      <h2>Uninstall</h2>
+      <p>Go to <code>chrome://extensions</code> and click <strong>Remove</strong> on Feed Cleaner.</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "feed-cleaner-site",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "zip": "node scripts/zip-extension.mjs",
+    "dev": "npm run zip && wrangler dev",
+    "deploy": "npm run zip && wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250901.0",
+    "typescript": "^5.6.0",
+    "wrangler": "^4.0.0"
+  }
+}
